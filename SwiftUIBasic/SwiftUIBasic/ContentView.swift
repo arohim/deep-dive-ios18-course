@@ -8,14 +8,50 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var fullText: String = "This is some editable text..."
+    @State private var username: String = ""
+
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Color
+                .gray
+                .opacity(0.7)
+                .ignoresSafeArea()
+            
+            TextField(
+                   "User name (email address)",
+                   text: $username
+               )
+            
+            Grid {
+                GridRow {
+                    TextEditor(text: $fullText)
+                    RoundedRectangle(cornerRadius:  20)
+                        .fill(.blue)
+                    RoundedRectangle(cornerRadius:  20)
+                        .fill(.blue)
+                    RoundedRectangle(cornerRadius:  20)
+                        .fill(.blue)
+                }
+                GridRow {
+                    RoundedRectangle(cornerRadius:  20)
+                        .fill(.blue)
+                    RoundedRectangle(cornerRadius:  20)
+                        .fill(.orange)
+                        .gridCellColumns(2)
+                }
+                GridRow {
+                    RoundedRectangle(cornerRadius:  20)
+                        .fill(.blue)
+                    RoundedRectangle(cornerRadius:  20)
+                        .fill(.orange)
+                        .gridCellColumns(2)
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
