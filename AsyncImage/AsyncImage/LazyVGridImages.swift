@@ -15,11 +15,11 @@ struct LazyVGridImages: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            LazyVGrid(columns: columns) {
+            LazyVGrid(columns: columns, spacing: 8) {
                 ForEach(ImgType.allCases, id: \.self) { img in
                     Image(img.rawValue)
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
                         .cornerRadius(10)
                         .shadow(radius: 20)
                 }
