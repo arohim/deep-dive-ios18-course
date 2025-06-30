@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Adding Game-Scratch
+
+  Created by Abdulrohim 'Him' Sama on 17/5/2568 BE.
+  
+*/
+
+"Game Over" = "Game Over";
+"Score" = "Score";
+"Level" = "Level";
+"Game" = "Game";
+"High Scores" = "High Scores";
+"Rank" = "Rank";
+"Name" = "Name";
+"Save" = "Save";
+
+"New High Score!" = "New High Score!";
+"Anon" = "Anon";
